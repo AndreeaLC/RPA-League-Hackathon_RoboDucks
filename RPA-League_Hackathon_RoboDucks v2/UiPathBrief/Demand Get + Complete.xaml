@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Demand_Get___Complete" mva:VisualBasic.Settings="{x:Null}"
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Demand_Get___Complete" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Demand_Get___Complete_1"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
@@ -54,38 +54,35 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Demand Get + Complete">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke the 2 workflows from the demand part" DisplayName="Demand Get + Complete" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictionaryDemand" />
     </Sequence.Variables>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetDemandDetails workflow" UnSafe="False" WorkflowFileName="GetDemandDetails.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetDemandDetails workflow" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="GetDemandDetails.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="out_dictionary">[dictionaryDemand]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
-      <sap2010:WorkflowViewState.IdRef>InvokeWorkflowFile_1</sap2010:WorkflowViewState.IdRef>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke CompleteDemand workflow" UnSafe="False" WorkflowFileName="CompleteDemand.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke CompleteDemand workflow" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CompleteDemand.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_Dictionary">[dictionaryDemand]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
-      <sap2010:WorkflowViewState.IdRef>InvokeWorkflowFile_2</sap2010:WorkflowViewState.IdRef>
     </ui:InvokeWorkflowFile>
-    <sap2010:WorkflowViewState.IdRef>Sequence_1</sap2010:WorkflowViewState.IdRef>
-    <sads:DebugSymbol.Symbol>d3BDOlxVc2Vyc1xhbGV4YW5kcnUuZmllcmFzY3VcRGVza3RvcFxVaVBhdGhcUlBBLUxlYWd1ZV9IYWNrYXRob25fUm9ib0R1Y2tzXFVpUGF0aEJyaWVmXERlbWFuZCBHZXQgKyBDb21wbGV0ZS54YW1sBzkDSw4CAQE9BUIdAgEGQwVIHQIBAj9iP3QCAQg9hgE9nQECAQdFYEVyAgEEQ4QBQ5kBAgED</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d5UBQzpcVXNlcnNcYWxleGFuZHJ1LmZpZXJhc2N1XERlc2t0b3BcVWlQYXRoXFYyXFJQQS1MZWFndWUtSGFja2F0aG9uX1JvYm9EdWNrc1xSUEEtTGVhZ3VlX0hhY2thdGhvbl9Sb2JvRHVja3MgdjJcVWlQYXRoQnJpZWZcRGVtYW5kIEdldCArIENvbXBsZXRlLnhhbWwHOQNIDgIBAT0FQR0CAQZCBUYdAgECP2I/dAIBCD29AT3UAQIBB0RgRHICAQRCuwFC0AECAQM=</sads:DebugSymbol.Symbol>
   </Sequence>
-  <sap2010:WorkflowViewState.IdRef>Demand_Get___Complete_1</sap2010:WorkflowViewState.IdRef>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="InvokeWorkflowFile_1" sap:VirtualizedContainerService.HintSize="314,87" />
       <sap2010:ViewStateData Id="InvokeWorkflowFile_2" sap:VirtualizedContainerService.HintSize="314,87" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="336,338">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="336,365">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Demand_Get___Complete_1" sap:VirtualizedContainerService.HintSize="376,458" />
+      <sap2010:ViewStateData Id="Demand_Get___Complete_1" sap:VirtualizedContainerService.HintSize="376,445" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

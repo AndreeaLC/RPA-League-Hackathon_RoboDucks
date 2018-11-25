@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="ClickCreateButton" mva:VisualBasic.Settings="{x:Null}"
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="ClickCreateButton" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ClickCreateButton_1"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
@@ -54,8 +54,8 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ClickCreateButton">
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+  <Sequence sap2010:Annotation.AnnotationText="Click the create button" DisplayName="ClickCreateButton" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -69,23 +69,21 @@
       <ui:Click.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c00a1ae87c37c71c45fe60b89882d282" Selector="&lt;html title='Automation Challenge' /&gt;&lt;webctrl aaname='Create' tag='BUTTON' type='button' /&gt;" WaitForReady="INTERACTIVE" />
       </ui:Click.Target>
-      <sap2010:WorkflowViewState.IdRef>Click_1</sap2010:WorkflowViewState.IdRef>
     </ui:Click>
-    <sap2010:WorkflowViewState.IdRef>Sequence_1</sap2010:WorkflowViewState.IdRef>
-    <sads:DebugSymbol.Symbol>d2xDOlxVc2Vyc1xhbGV4YW5kcnUuZmllcmFzY3VcRGVza3RvcFxVaVBhdGhcUlBBLUxlYWd1ZV9IYWNrYXRob25fUm9ib0R1Y2tzXFVpUGF0aEJyaWVmXENsaWNrQ3JlYXRlQnV0dG9uLnhhbWwDOQNMDgIBAToFSRACAQJGmAFGgQICAQM=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d5EBQzpcVXNlcnNcYWxleGFuZHJ1LmZpZXJhc2N1XERlc2t0b3BcVWlQYXRoXFYyXFJQQS1MZWFndWUtSGFja2F0aG9uX1JvYm9EdWNrc1xSUEEtTGVhZ3VlX0hhY2thdGhvbl9Sb2JvRHVja3MgdjJcVWlQYXRoQnJpZWZcQ2xpY2tDcmVhdGVCdXR0b24ueGFtbAM5A0oOAgEBOgVIEAIBAkaYAUaBAgIBAw==</sads:DebugSymbol.Symbol>
   </Sequence>
-  <sap2010:WorkflowViewState.IdRef>ClickCreateButton_1</sap2010:WorkflowViewState.IdRef>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="Click_1" sap:VirtualizedContainerService.HintSize="314,106" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="336,230">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="336,257">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ClickCreateButton_1" sap:VirtualizedContainerService.HintSize="376,350" />
+      <sap2010:ViewStateData Id="ClickCreateButton_1" sap:VirtualizedContainerService.HintSize="376,337" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

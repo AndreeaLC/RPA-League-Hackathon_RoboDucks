@@ -55,7 +55,7 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ClickSubmitButton" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Click the submit button so it will generate the customer code" DisplayName="ClickSubmitButton" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <ui:RetryScope DisplayName="Retry Scope" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:05">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
@@ -156,7 +156,7 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <sads:DebugSymbol.Symbol>d2NDOlxVc2Vyc1xBbmRyZWVhXERvY3VtZW50c1xHaXRIdWJcUlBBLUxlYWd1ZV9IYWNrYXRob25fUm9ib0R1Y2tzXFVpUGF0aEJyaWVmXENsaWNrU3VibWl0QnV0dG9uLnhhbWwOOgOgAQ4CAQE7BV8VAgEDYAWeARUCAQI7fzuJAQIBDjttO3ACAQ0+C1MWAgEHWAtcIAIBBD8NQx0CAQpEDVIYAgEIWokBWvcBAgEGWoICWogCAgEFQaABQbACAgEMP/oBP4ACAgELUKABUI4CAgEJ</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d5EBQzpcVXNlcnNcYWxleGFuZHJ1LmZpZXJhc2N1XERlc2t0b3BcVWlQYXRoXFYyXFJQQS1MZWFndWUtSGFja2F0aG9uX1JvYm9EdWNrc1xSUEEtTGVhZ3VlX0hhY2thdGhvbl9Sb2JvRHVja3MgdjJcVWlQYXRoQnJpZWZcQ2xpY2tTdWJtaXRCdXR0b24ueGFtbA46A6ABDgIBATsFXxUCAQNgBZ4BFQIBAjt/O4kBAgEOO207cAIBDT4LUxYCAQdYC1wgAgEEPw1DHQIBCkQNUhgCAQhaiQFa9wECAQZaggJaiAICAQVBoAFBsAICAQw/+gE/gAICAQtQoAFQjgICAQk=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -213,14 +213,15 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="380,904">
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="380,931">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ClickSubmitButton_1" sap:VirtualizedContainerService.HintSize="420,984" />
+      <sap2010:ViewStateData Id="ClickSubmitButton_1" sap:VirtualizedContainerService.HintSize="420,1011" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
