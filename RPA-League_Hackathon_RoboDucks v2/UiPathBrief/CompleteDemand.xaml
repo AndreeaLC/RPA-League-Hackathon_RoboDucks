@@ -65,7 +65,6 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="CompleteDemand" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -265,7 +264,6 @@
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[in_Dictionary(&quot;cargo preference&quot;)]" TopMost="True" />
     <If Condition="[in_Dictionary(&quot;cargo preference&quot;).Contains(&quot;Urgent&quot;)]" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LABEL'" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -302,7 +300,7 @@
         </ui:Click>
       </If.Else>
     </If>
-    <sads:DebugSymbol.Symbol>d2BDOlxVc2Vyc1xBbmRyZWVhXERvY3VtZW50c1xHaXRIdWJcUlBBLUxlYWd1ZV9IYWNrYXRob25fUm9ib0R1Y2tzXFVpUGF0aEJyaWVmXENvbXBsZXRlRGVtYW5kLnhhbWxCRwOyAg4CAQFJNEk6AgEGSjRKQAIBBUs0SzwCAQRMNEw9AgEDTTRNOgIBAlAFZBUCAUdlBXkVAgFAegWIARACAT2JAQWdARUCATaeAQWyARUCAS+zAQXHARUCASjIAQXcARUCASHdAQXxARUCARryAQWGAhUCAROHAgWLAh0CARGMAgWMAtsBAgEOjQIFsAIKAgEHXgliIgIBTFYLWhkCAUhzCXciAgFFawtvGQIBQYYBmAGGAbsCAgE+lwEJmwEiAgE7jwELkwEZAgE3rAEJsAEiAgE0pAELqAEZAgEwwQEJxQEiAgEtuQELvQEZAgEp1gEJ2gEiAgEmzgEL0gEZAgEi6wEJ7wEiAgEf4wEL5wEZAgEbgAIJhAIiAgEY+AEL/AEZAgEUhwK2AYcCxgECARKMApoBjALJAQIBD40CE40CXwIBCI8CCZ0CFAIBDKACCa4CFAIBCmCcAWCZAgIBTVieAVjAAQIBS1anAlbLAgIBSXWcAXWRAgIBRm2eAW29AQIBRGujAmvPAgIBQpkBnAGZAZQCAgE8kQGeAZEBvQECATqPAZoCjwHGAgIBOK4BnAGuAZcCAgE1pgGeAaYBvQECATOkAZ4CpAHPAgIBMcMBnAHDAZkCAgEuuwGeAbsBvQECASy5AZ4CuQHPAgIBKtgBnAHYAZQCAgEn0AGeAdABvQECASXOAZoCzgHGAgIBI+0BnAHtAf0BAgEg5QGeAeUBvgECAR7jAZsC4wHIAgIBHIICnAGCAvsBAgEZ+gGeAfoBvQECARf4AZ4C+AHOAgIBFZsCnAGbAvYBAgENrAKcAawC/wECAQs=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d44BQzpcVXNlcnNcYWxleGFuZHJ1LmZpZXJhc2N1XERlc2t0b3BcVWlQYXRoXFYyXFJQQS1MZWFndWUtSGFja2F0aG9uX1JvYm9EdWNrc1xSUEEtTGVhZ3VlX0hhY2thdGhvbl9Sb2JvRHVja3MgdjJcVWlQYXRoQnJpZWZcQ29tcGxldGVEZW1hbmQueGFtbEBGA7ACDgIBAUg0SDoCAQZJNElAAgEFSjRKPAIBBEs0Sz0CAQNMNEw6AgECTwVjFQIBRGQFeBUCAT15BYcBEAIBOogBBZwBFQIBM50BBbEBFQIBLLIBBcYBFQIBJccBBdsBFQIBHtwBBfABFQIBF/EBBYUCFQIBEIYCBYoCHQIBDosCBa4CCgIBB10JYSICAUlVC1kZAgFFcgl2IgIBQmoLbhkCAT6FAZgBhQG7AgIBO5YBCZoBIgIBOI4BC5IBGQIBNKsBCa8BIgIBMaMBC6cBGQIBLcABCcQBIgIBKrgBC7wBGQIBJtUBCdkBIgIBI80BC9EBGQIBH+oBCe4BIgIBHOIBC+YBGQIBGP8BCYMCIgIBFfcBC/sBGQIBEYYCtgGGAsYBAgEPiwITiwJfAgEIjQIJmwIUAgEMngIJrAIUAgEKX5wBX5kCAgFKV54BV8ABAgFIVacCVcsCAgFGdJwBdJECAgFDbJ4BbL0BAgFBaqMCas8CAgE/mAGcAZgBlAICATmQAZ4BkAG9AQIBN44BmgKOAcYCAgE1rQGcAa0BlwICATKlAZ4BpQG9AQIBMKMBngKjAc8CAgEuwgGcAcIBmQICASu6AZ4BugG9AQIBKbgBngK4Ac8CAgEn1wGcAdcBlAICASTPAZ4BzwG9AQIBIs0BmgLNAcYCAgEg7AGcAewB/QECAR3kAZ4B5AG+AQIBG+IBmwLiAcgCAgEZgQKcAYEC+wECARb5AZ4B+QG9AQIBFPcBngL3Ac4CAgESmQKcAZkC9gECAQ2qApwBqgL/AQIBCw==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -395,18 +393,17 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="InvokeWorkflowFile_1" sap:VirtualizedContainerService.HintSize="653,87" />
-      <sap2010:ViewStateData Id="MessageBox_1" sap:VirtualizedContainerService.HintSize="653,59" />
       <sap2010:ViewStateData Id="Click_4" sap:VirtualizedContainerService.HintSize="314,106" />
       <sap2010:ViewStateData Id="Click_5" sap:VirtualizedContainerService.HintSize="314,106" />
       <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="653,254" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="675,1423">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="675,1324">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="CompleteDemand_1" sap:VirtualizedContainerService.HintSize="715,1503" />
+      <sap2010:ViewStateData Id="CompleteDemand_1" sap:VirtualizedContainerService.HintSize="715,1404" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
