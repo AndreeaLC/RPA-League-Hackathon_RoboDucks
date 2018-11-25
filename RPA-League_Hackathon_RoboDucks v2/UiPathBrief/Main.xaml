@@ -60,7 +60,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This is the Main workflow of the project. Here we start by clicking the &quot;Start&quot; button, and we incremeent the number of values processed with 1. We tried using element exist on the map or even on the congratulation in the end, but we ended up in a while loop because apparently this is visible no matter of the state of the application (maybe SPA?)&#xD;&#xA;Pre requsites: N/A&#xD;&#xA;Post requisites: N/A" DisplayName="RPA Challenge - Shortest Path" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="This is the Main workflow of the project. Here we start by clicking the &quot;Start&quot; button, and we incremeent the number of values processed with 1. We tried using element exist on the map or even on the congratulation in the end, but we ended up in a while loop because apparently this is visible no matter of the state of the application (maybe SPA?)&#xA;Pre requsites: N/A&#xA;Post requisites: N/A" DisplayName="RPA Challenge - Shortest Path" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="Congratulations" />
       <Variable x:TypeArguments="ui:GenericValue" Name="count" />
@@ -169,7 +169,14 @@
       <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="706,60" />
       <sap2010:ViewStateData Id="InvokeWorkflowFile_11" sap:VirtualizedContainerService.HintSize="706,87" />
       <sap2010:ViewStateData Id="InvokeWorkflowFile_8" sap:VirtualizedContainerService.HintSize="706,87" />
-      <sap2010:ViewStateData Id="InvokeWorkflowFile_12" sap:VirtualizedContainerService.HintSize="706,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_12" sap:VirtualizedContainerService.HintSize="706,87">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="InvokeWorkflowFile_6" sap:VirtualizedContainerService.HintSize="314,87" />
       <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="336,211">
         <sap:WorkflowViewStateService.ViewState>

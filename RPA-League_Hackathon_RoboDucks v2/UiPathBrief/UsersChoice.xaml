@@ -65,7 +65,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow verifies if the user has chosen 2 dots, one RED and one GREEN. We did not verify if the 2 dots are the closest from the pair in the dots graph&#xD;&#xA;&#xD;&#xA;Pre requisites : Browser is opened at the chose URL&#xD;&#xA;Post requisites : a boolean, hasChose, which states if the user did make a choice or not" DisplayName="UsersChoice" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow verifies if the user has chosen 2 dots, one RED and one GREEN. We did not verify if the 2 dots are the closest from the pair in the dots graph&#xA;&#xA;Pre requisites : Browser is opened at the chose URL&#xA;Post requisites : a boolean, hasChosen, which states if the user did make a choice or not" DisplayName="UsersChoice" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="DemandName" />
       <Variable x:TypeArguments="x:Boolean" Name="SupplierName" />
