@@ -70,12 +70,12 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CheckSupplyOCR" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Creates a list of the expected keys (corresponding to values that must be inputed) and checks if they are already included in the dictionary.&#xD;&#xA;&#xD;&#xA;Prerequisites : The dictionary with the keys/values from the supply table&#xD;&#xA;&#xD;&#xA;Post Action : Dictionary with all the expected keys; for the keys that were not scrapped by OCR, the values are empty strings." DisplayName="CheckSupplyOCR" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" Name="ListK" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[new Dictionary(of String, String)]" Name="new_dict" />
     </Sequence.Variables>
-    <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Assign - list of correct keys" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:List(x:String)">[ListK]</OutArgument>
       </Assign.To>
@@ -88,16 +88,16 @@
     <AddToCollection x:TypeArguments="x:String" Collection="[ListK]" DisplayName="Add To Collection &quot;address 1&quot;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_3" Item="address 1" />
     <AddToCollection x:TypeArguments="x:String" Collection="[ListK]" DisplayName="Add To Collection &quot;address 2&quot;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_4" Item="address 2" />
     <AddToCollection x:TypeArguments="x:String" Collection="[ListK]" DisplayName="Add To Collection &quot;state&quot;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_5" Item="state" />
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ListK]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - assign empty string for keys that were not found through OCR" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ListK]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="item" />
           </ActivityAction.Argument>
           <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <If Condition="[not io_dict.Keys.Contains(item)]" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[not io_dict.Keys.Contains(item)]" DisplayName="If correct key is not included in dictionary =&gt; create dict(key) = &quot;&quot;" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Assign>
+                <Assign DisplayName="Assign - empty string" sap2010:WorkflowViewState.IdRef="Assign_5">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[io_dict(item)]</OutArgument>
                   </Assign.To>
@@ -106,7 +106,6 @@
                       <Literal x:TypeArguments="x:String" Value="" />
                     </InArgument>
                   </Assign.Value>
-                  <sap2010:WorkflowViewState.IdRef>Assign_5</sap2010:WorkflowViewState.IdRef>
                 </Assign>
               </If.Then>
             </If>
@@ -114,7 +113,7 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <sads:DebugSymbol.Symbol>d2BDOlxVc2Vyc1xBbmRyZWVhXERvY3VtZW50c1xHaXRIdWJcUlBBLUxlYWd1ZV9IYWNrYXRob25fUm9ib0R1Y2tzXFVpUGF0aEJyaWVmXENoZWNrU3VwcGx5T0NSLnhhbWwcSQN2DgIBAUxOTHMCAQJOBVUOAgEiVgVWwwECAR5XBVe7AQIBGlgFWMUBAgEWWQVZxQECARJaBVq9AQIBDlsFdBICAQNTOlNPAgElUDtQQgIBI1Y8VkUCASBWtgFWwAECAR9XPFdFAgEcV7IBV7gBAgEbWDxYRQIBGFi3AVjCAQIBF1k8WUUCARRZtwFZwgECARNaPFpFAgEQWrMBWroBAgEPW5ABW5kBAgEMYQtxFgIBBGINcBICAQViG2I+AgEGZBFuGgIBB2oXakYCAQtmPWZMAgEI</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d3lDOlxVc2Vyc1xBbmRyZWVhXERlc2t0b3BcUlBBLUxlYWd1ZS1IYWNrYXRob25fUm9ib0R1Y2tzXFJQQS1MZWFndWVfSGFja2F0aG9uX1JvYm9EdWNrcyB2MlxVaVBhdGhCcmllZlxDaGVja1N1cHBseU9DUi54YW1sHEkDdQ4CAQFMTkxzAgECTgVVDgIBIlYFVsMBAgEeVwVXuwECARpYBVjFAQIBFlkFWcUBAgESWgVavQECAQ5bBXMSAgEDUzpTTwIBJVA7UEICASNWPFZFAgEgVrYBVsABAgEfVzxXRQIBHFeyAVe4AQIBG1g8WEUCARhYtwFYwgECARdZPFlFAgEUWbcBWcIBAgETWjxaRQIBEFqzAVq6AQIBD1vPAVvYAQIBDGELcBYCAQRiDW8SAgEFYhtiPgIBBmQRbRoCAQdqF2pGAgELZj1mTAIBCA==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -134,14 +133,15 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="502,466" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="524,1000">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="524,1117">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="CheckSupplyOCR_1" sap:VirtualizedContainerService.HintSize="564,1080" />
+      <sap2010:ViewStateData Id="CheckSupplyOCR_1" sap:VirtualizedContainerService.HintSize="564,1197" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

@@ -67,15 +67,15 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CompleteSupply" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <ui:SetToClipboard DisplayName="Set To Clipboard" sap2010:WorkflowViewState.IdRef="SetToClipboard_1" Text="[in_name.Trim]" />
-    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
+  <Sequence sap2010:Annotation.AnnotationText="It fills in the fileds related to supply by using the values in the dictionary.&#xA;&#xA;Prerequisites : &#xD;&#xA;- RPA Challenge tab has to be open&#xD;&#xA;- Dictionary keys/values from Supply table&#xA;&#xD;&#xA;Post Action : All supply related fields are filled in&#xA;" DisplayName="CompleteSupply" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <ui:SetToClipboard DisplayName="Set To Clipboard - Name" sap2010:WorkflowViewState.IdRef="SetToClipboard_1" Text="[in_name.Trim]" />
+    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base - Name" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
       <ui:AnchorBase.Action>
         <ActivityAction x:TypeArguments="ui:Anchor">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
           </ActivityAction.Argument>
-          <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'INPUT  03AY5'" EmptyField="False" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="v" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
+          <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey Ctrl + v" EmptyField="False" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="v" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
             <ui:SendHotkey.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="8118e557c533a15d0867ccf92f5d9b9a" Selector="&lt;webctrl tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
             </ui:SendHotkey.Target>
@@ -83,21 +83,21 @@
         </ActivityAction>
       </ui:AnchorBase.Action>
       <ui:AnchorBase.AnchorProvider>
-        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'SPAN'" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_7" WaitActive="False" WaitVisible="False">
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'Name'" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_7" WaitActive="False" WaitVisible="False">
           <ui:WaitUiElementAppear.Target>
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="08837f7db27490893a5879644202d45f" Selector="&lt;html title='Automation Challenge' /&gt;&lt;webctrl aaname='Name' idx='2' parentid='gamecontainer' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
           </ui:WaitUiElementAppear.Target>
         </ui:WaitUiElementAppear>
       </ui:AnchorBase.AnchorProvider>
     </ui:AnchorBase>
-    <ui:SetToClipboard DisplayName="Set To Clipboard" sap2010:WorkflowViewState.IdRef="SetToClipboard_2" Text="[in_address.Trim]" />
-    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap2010:WorkflowViewState.IdRef="AnchorBase_8">
+    <ui:SetToClipboard DisplayName="Set To Clipboard - Address1" sap2010:WorkflowViewState.IdRef="SetToClipboard_2" Text="[in_address.Trim]" />
+    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base - Address1" sap2010:WorkflowViewState.IdRef="AnchorBase_8">
       <ui:AnchorBase.Action>
         <ActivityAction x:TypeArguments="ui:Anchor">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
           </ActivityAction.Argument>
-          <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'INPUT  CLLYK'" EmptyField="False" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="v" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
+          <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'Ctrl v'" EmptyField="False" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="v" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
             <ui:SendHotkey.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a65b3f6e153c7c0898bc44597912ac78" Selector="&lt;webctrl tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
             </ui:SendHotkey.Target>
@@ -105,21 +105,21 @@
         </ActivityAction>
       </ui:AnchorBase.Action>
       <ui:AnchorBase.AnchorProvider>
-        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'SPAN'" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_8" WaitActive="False" WaitVisible="False">
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'Address1'" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_8" WaitActive="False" WaitVisible="False">
           <ui:WaitUiElementAppear.Target>
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4e34c1a17278a27276a1e6aedcaae29d" Selector="&lt;html title='Automation Challenge' /&gt;&lt;webctrl aaname='Address' idx='2' parentid='gamecontainer' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
           </ui:WaitUiElementAppear.Target>
         </ui:WaitUiElementAppear>
       </ui:AnchorBase.AnchorProvider>
     </ui:AnchorBase>
-    <ui:SetToClipboard DisplayName="Set To Clipboard" sap2010:WorkflowViewState.IdRef="SetToClipboard_3" Text="[in_address2.Trim]" />
-    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap2010:WorkflowViewState.IdRef="AnchorBase_9">
+    <ui:SetToClipboard DisplayName="Set To Clipboard - Address2" sap2010:WorkflowViewState.IdRef="SetToClipboard_3" Text="[in_address2.Trim]" />
+    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base - Address2" sap2010:WorkflowViewState.IdRef="AnchorBase_9">
       <ui:AnchorBase.Action>
         <ActivityAction x:TypeArguments="ui:Anchor">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
           </ActivityAction.Argument>
-          <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'INPUT  IWTB9'" EmptyField="False" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="v" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
+          <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'Ctrl v'" EmptyField="False" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="v" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
             <ui:SendHotkey.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d292f9fbeca7cc9c87c59f2cbbb60993" Selector="&lt;webctrl tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
             </ui:SendHotkey.Target>
@@ -127,21 +127,21 @@
         </ActivityAction>
       </ui:AnchorBase.Action>
       <ui:AnchorBase.AnchorProvider>
-        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'SPAN'" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_9" WaitActive="False" WaitVisible="False">
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'Address2'" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_9" WaitActive="False" WaitVisible="False">
           <ui:WaitUiElementAppear.Target>
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fc614474d0ff549b8ed3819778be97ed" Selector="&lt;html title='Automation Challenge' /&gt;&lt;webctrl aaname='Address-2' idx='2' parentid='gamecontainer' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
           </ui:WaitUiElementAppear.Target>
         </ui:WaitUiElementAppear>
       </ui:AnchorBase.AnchorProvider>
     </ui:AnchorBase>
-    <ui:SetToClipboard DisplayName="Set To Clipboard" sap2010:WorkflowViewState.IdRef="SetToClipboard_4" Text="[in_city.Trim]" />
-    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap2010:WorkflowViewState.IdRef="AnchorBase_10">
+    <ui:SetToClipboard DisplayName="Set To Clipboard - City" sap2010:WorkflowViewState.IdRef="SetToClipboard_4" Text="[in_city.Trim]" />
+    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base - City" sap2010:WorkflowViewState.IdRef="AnchorBase_10">
       <ui:AnchorBase.Action>
         <ActivityAction x:TypeArguments="ui:Anchor">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
           </ActivityAction.Argument>
-          <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'INPUT  6IF3I'" EmptyField="False" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="v" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
+          <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'Ctrl v'" EmptyField="False" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="v" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
             <ui:SendHotkey.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b9a76b7c1c07a91ae68308d99b2a2adc" Selector="&lt;webctrl tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
             </ui:SendHotkey.Target>
@@ -149,21 +149,21 @@
         </ActivityAction>
       </ui:AnchorBase.Action>
       <ui:AnchorBase.AnchorProvider>
-        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'SPAN'" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_10" WaitActive="False" WaitVisible="False">
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'City'" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_10" WaitActive="False" WaitVisible="False">
           <ui:WaitUiElementAppear.Target>
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="021d813451753f34bfca9d1b2ca4ab26" Selector="&lt;html title='Automation Challenge' /&gt;&lt;webctrl aaname='City' idx='2' parentid='gamecontainer' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
           </ui:WaitUiElementAppear.Target>
         </ui:WaitUiElementAppear>
       </ui:AnchorBase.AnchorProvider>
     </ui:AnchorBase>
-    <ui:SetToClipboard DisplayName="Set To Clipboard" sap2010:WorkflowViewState.IdRef="SetToClipboard_5" Text="[in_zip.Trim]" />
-    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap2010:WorkflowViewState.IdRef="AnchorBase_11">
+    <ui:SetToClipboard DisplayName="Set To Clipboard - zip code" sap2010:WorkflowViewState.IdRef="SetToClipboard_5" Text="[in_zip.Trim]" />
+    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base - zip code" sap2010:WorkflowViewState.IdRef="AnchorBase_11">
       <ui:AnchorBase.Action>
         <ActivityAction x:TypeArguments="ui:Anchor">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
           </ActivityAction.Argument>
-          <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'INPUT  QHPU0'" EmptyField="False" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="v" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
+          <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'Ctrl v'" EmptyField="False" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="v" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
             <ui:SendHotkey.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e53f66a5cff15656efcb9dd89513cc44" Selector="&lt;webctrl tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
             </ui:SendHotkey.Target>
@@ -171,7 +171,7 @@
         </ActivityAction>
       </ui:AnchorBase.Action>
       <ui:AnchorBase.AnchorProvider>
-        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'INPUT  QHPU0'" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_11" WaitActive="False" WaitVisible="False">
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'zip code'" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_11" WaitActive="False" WaitVisible="False">
           <ui:WaitUiElementAppear.Target>
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="233f7eeb87b0ac6fb81f1b26d2a37829" Selector="&lt;html title='Automation Challenge' /&gt;&lt;webctrl aaname='Zip' idx='2' tag='LABEL' /&gt;" WaitForReady="INTERACTIVE" />
           </ui:WaitUiElementAppear.Target>
@@ -474,7 +474,7 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <sads:DebugSymbol.Symbol>d2BDOlxVc2Vyc1xBbmRyZWVhXERvY3VtZW50c1xHaXRIdWJcUlBBLUxlYWd1ZV9IYWNrYXRob25fUm9ib0R1Y2tzXFVpUGF0aEJyaWVmXENvbXBsZXRlU3VwcGx5LnhhbWw4RgPeAw4CAQFHBUeCAQIBPEgFXBUCATZdBV2FAQIBM14FchUCAS1zBXOGAQIBKnQFiAEVAgEkiQEFiQGCAQIBIYoBBZ4BFQIBG58BBZ8BgQECARigAQW0ARUCARK1AQXmARUCARHnAQWYAhUCARCZAgXKAhUCAQ/LAgX8AhUCAQ79AgWoAxACAQOpAwXcAxUCAQJHb0d/AgE9VglaIgIBOk4LUhsCATddb12CAQIBNGwJcCICATFkC2gbAgEuc29zgwECASuCAQmGASICASh6C34bAgEliQFviQF/AgEimAEJnAEiAgEfkAELlAEbAgEcnwFvnwF+AgEZrgEJsgEiAgEWpgELqgEbAgET/wIJkwMZAgEHmwMNpAMbAgEEWJwBWJQCAgE7UJ4BUL0BAgE5TvkBTvwBAgE4bpwBbpcCAgEyZp4BZr0BAgEwZPkBZPwBAgEvhAGcAYQBmQICASl8ngF8vQECASd6+QF6/AECASaaAZwBmgGUAgIBIJIBngGSAb0BAgEekAH5AZAB/AECAR2wAZwBsAH7AQIBF6gBngGoAb0BAgEVpgH5AaYB/AECARSNAw2RAyYCAQyFAw+JAx0CAQidA6ABnQPAAQIBBqEDE6EDQgIBBY8DoAGPA4ECAgENhwOiAYcDwgECAQuFA50ChQOpAgIBCQ==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d3lDOlxVc2Vyc1xBbmRyZWVhXERlc2t0b3BcUlBBLUxlYWd1ZS1IYWNrYXRob25fUm9ib0R1Y2tzXFJQQS1MZWFndWVfSGFja2F0aG9uX1JvYm9EdWNrcyB2MlxVaVBhdGhCcmllZlxDb21wbGV0ZVN1cHBseS54YW1sOEYD3gMOAgEBRwVHiQECATxIBVwVAgE2XQVdkAECATNeBXIVAgEtcwVzkQECASp0BYgBFQIBJIkBBYkBiQECASGKAQWeARUCARufAQWfAYwBAgEYoAEFtAEVAgEStQEF5gEVAgER5wEFmAIVAgEQmQIFygIVAgEPywIF/AIVAgEO/QIFqAMQAgEDqQMF3AMVAgECR3ZHhgECAT1WCVoiAgE6TgtSGwIBN116XY0BAgE0bAlwIgIBMWQLaBsCAS5zenOOAQIBK4IBCYYBIgIBKHoLfhsCASWJAXaJAYYBAgEimAEJnAEiAgEfkAELlAEbAgEcnwF6nwGJAQIBGa4BCbIBIgIBFqYBC6oBGwIBE/8CCZMDGQIBB5sDDaQDGwIBBFicAViUAgIBO1CeAVC9AQIBOU7zAU72AQIBOG6cAW6XAgIBMmaeAWa9AQIBMGTzAWT2AQIBL4QBnAGEAZkCAgEpfJ4BfL0BAgEnevMBevYBAgEmmgGcAZoBlAICASCSAZ4BkgG9AQIBHpAB8wGQAfYBAgEdsAGcAbAB+wECAReoAZ4BqAG9AQIBFaYB8wGmAfYBAgEUjQMNkQMmAgEMhQMPiQMdAgEInQOgAZ0DwAECAQahAxOhA0ICAQWPA6ABjwOBAgIBDYcDogGHA8IBAgELhQOdAoUDqQICAQk=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -518,7 +518,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="222,175">
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="746,175">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -553,7 +553,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="746,175">
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="222,175">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -588,7 +588,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="222,175">
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="746,175">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -623,7 +623,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="222,175">
+      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="746,175">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -699,7 +699,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="222,175">
+      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="440,175">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -714,14 +714,15 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="728,2555">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="728,2687">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="CompleteSupply_1" sap:VirtualizedContainerService.HintSize="480,1529" />
+      <sap2010:ViewStateData Id="CompleteSupply_1" sap:VirtualizedContainerService.HintSize="768,2767" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

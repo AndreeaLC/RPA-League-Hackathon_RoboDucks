@@ -59,10 +59,9 @@
       <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Supply Get + Complete 2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="It groups 3 other Workflows - scraping the data, creating the dictionary, filling in the fields.&#xD;&#xA;&#xD;&#xA;Prerequisites : RPA Challenge open must be open&#xD;&#xA;Post Action : Supply related fields are filled in " DisplayName="Supply Get + Complete 2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictSupply" />
     </Sequence.Variables>
@@ -86,21 +85,22 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_state">[dictSupply("state")]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <sads:DebugSymbol.Symbol>d2lDOlxVc2Vyc1xBbmRyZWVhXERvY3VtZW50c1xHaXRIdWJcUlBBLUxlYWd1ZV9IYWNrYXRob25fUm9ib0R1Y2tzXFVpUGF0aEJyaWVmXFN1cHBseSBHZXQgKyBDb21wbGV0ZSAyLnhhbWwPQQNaDgIBAUUFSR0CARRKBU4dAgEQTwVYHQIBAkdcR2gCARZFvQFF1AECARVMXUxpAgESSrsBStABAgERU0RTXQIBDlU/VVcCAQxWQVZWAgEKVEBUVAIBCFJDUlwCAQZRQFFUAgEET7sBT9ABAgED</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d4IBQzpcVXNlcnNcQW5kcmVlYVxEZXNrdG9wXFJQQS1MZWFndWUtSGFja2F0aG9uX1JvYm9EdWNrc1xSUEEtTGVhZ3VlX0hhY2thdGhvbl9Sb2JvRHVja3MgdjJcVWlQYXRoQnJpZWZcU3VwcGx5IEdldCArIENvbXBsZXRlIDIueGFtbA9AA1kOAgEBRAVIHQIBFEkFTR0CARBOBVcdAgECRlxGaAIBFkS9AUTUAQIBFUtdS2kCARJJuwFJ0AECARFSRFJdAgEOVD9UVwIBDFVBVVYCAQpTQFNUAgEIUUNRXAIBBlBAUFQCAQROuwFO0AECAQM=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="InvokeWorkflowFile_1" sap:VirtualizedContainerService.HintSize="314,87" />
       <sap2010:ViewStateData Id="InvokeWorkflowFile_3" sap:VirtualizedContainerService.HintSize="314,87" />
       <sap2010:ViewStateData Id="InvokeWorkflowFile_2" sap:VirtualizedContainerService.HintSize="314,87" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="336,465">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="336,552">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Supply_Get___Complete_2_1" sap:VirtualizedContainerService.HintSize="376,585" />
+      <sap2010:ViewStateData Id="Supply_Get___Complete_2_1" sap:VirtualizedContainerService.HintSize="376,632" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

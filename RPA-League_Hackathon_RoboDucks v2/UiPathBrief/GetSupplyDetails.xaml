@@ -70,10 +70,9 @@
       <AssemblyReference>System.Interactive.Async</AssemblyReference>
       <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetSupplyDemand" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="It scrapes the supply table by using indices to parse the table and create a dictionary with keys/values from the table.&#xD;&#xA;&#xD;&#xA;Prerequisites : RPAChallenge Tab has to be open&#xD;&#xA;Post Action : The first dictionary (partially keys in standard form, those that were not recognized or that did not fulfill any conditions, were marked as unknown)&#xD;&#xA;" DisplayName="GetSupplyDemand" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="idex" />
       <Variable x:TypeArguments="x:String" Name="valueName" />
@@ -120,7 +119,7 @@
               <InArgument x:TypeArguments="x:Boolean">False</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign sap2010:WorkflowViewState.IdRef="Assign_13">
+          <Assign DisplayName="Pgdn has not been pressed (False)" sap2010:WorkflowViewState.IdRef="Assign_13">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Boolean">[_pgdn]</OutArgument>
             </Assign.To>
@@ -129,7 +128,7 @@
             </Assign.Value>
           </Assign>
           <While DisplayName="While the element is not found" sap2010:WorkflowViewState.IdRef="While_2" Condition="[not foundElement]">
-            <TryCatch DisplayName="Try Catch" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch -  Get Key with OCr" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
                 <Sequence DisplayName="Try to get key from image + clean data" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <ui:GetOCRText Text="{x:Null}" WordsInfo="{x:Null}" DisplayName="Get keyName from image" sap2010:WorkflowViewState.IdRef="GetOCRText_1">
@@ -169,7 +168,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <If Condition="[scale &lt; 5]" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[scale &lt; 5]" DisplayName="If scale &lt; 5, increment scale; else if pgdn has not been pressed, reset scale to 1, press pgdn, and set pgdn as pressed (True)" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Then>
                         <Assign sap2010:WorkflowViewState.IdRef="Assign_8">
                           <Assign.To>
@@ -182,7 +181,7 @@
                       </If.Then>
                       <If.Else>
                         <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8">
-                          <If Condition="[not _pgdn]" sap2010:WorkflowViewState.IdRef="If_4">
+                          <If Condition="[not _pgdn]" DisplayName="If pgdn not yet pressed" sap2010:WorkflowViewState.IdRef="If_4">
                             <If.Then>
                               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_10">
                                 <Assign sap2010:WorkflowViewState.IdRef="Assign_11">
@@ -217,7 +216,7 @@
               </TryCatch.Catches>
             </TryCatch>
           </While>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Transforms keyName into finalKey (ifs)" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CleanDataSupply.xaml">
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Transforms keyName into finalKey(standard form)" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CleanDataSupply.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_string">[keyName]</InArgument>
               <OutArgument x:TypeArguments="x:String" x:Key="out_keyWord">[finalKey]</OutArgument>
@@ -258,15 +257,15 @@
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[dictValues]</InArgument>
       </Assign.Value>
     </Assign>
-    <sads:DebugSymbol.Symbol>d2JDOlxVc2Vyc1xBbmRyZWVhXERvY3VtZW50c1xHaXRIdWJcUlBBLUxlYWd1ZV9IYWNrYXRob25fUm9ib0R1Y2tzXFVpUGF0aEJyaWVmXEdldFN1cHBseURldGFpbHMueGFtbElMA4YCDgIBAVBOUHMCAQNTNFM3AgECWAVfDgIBZWAFZxMCAWFoBW8OAgFdcAX8AQ0CAQn9AQWEAg4CAQRdL10wAgFoWjBaNgIBZmU4ZUYCAWJimAFiowICAWRtMG0+AgFgajFqRQIBXnEH+wESAgEMcGpweQIBCoICSoICVgIBB/8BS/8BVQIBBXIJ+gEUAgENcwt6FAIBWXsLggEUAgFVgwEL2wETAgEk3AEL4QEjAgEe4gEL6QEZAgEZ6gEL8QEUAgET8gEL+QEUAgEOeDd4PAIBXHU4dUYCAVqAATeAATwCAVh9OH0/AgFWhAEN2gEYAgEngwFzgwGHAQIBJd8BS98BVQIBIt4BSN4BUQIBINwByQHcAd8BAgEf5wE35wFCAgEa5AGeAeQB1AICARzvATbvAUECARfsATfsAU0CART3ATX3AT8CARH0ATb0ATwCAQ+GARGkARwCAUCsARXWARoCASiHAROTASMCAUqUARObARwCAUWcAROjARwCAUGsASOsATMCASmuARm1ASICATu4ARnUASQCASuRAaYBkQG7AgIBU40BGY0B9AECAUuZAT6ZAU8CAUiWAT+WAUgCAUahAT+hAUMCAUSeAUCeAU4CAUKzAUSzAVECAT6wAUWwAUwCATy5ARvTASACASyNAeYBjQHxAQIBUY0B1wGNAeABAgFPjQGqAY0BswECAU2NAb0BjQHBAQIBTLkBKbkBNgIBLbsBH9EBKgIBL7wBIcMBKgIBN8QBIcgBMQIBNMkBIdABKgIBMMEBTMEBTQIBOr4BTb4BVAIBOMYBtAHGAcQCAgE2xAGGAsQBjAICATXOAU3OAVMCATPLAU7LAVUCATE=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d3tDOlxVc2Vyc1xBbmRyZWVhXERlc2t0b3BcUlBBLUxlYWd1ZS1IYWNrYXRob25fUm9ib0R1Y2tzXFJQQS1MZWFndWVfSGFja2F0aG9uX1JvYm9EdWNrcyB2MlxVaVBhdGhCcmllZlxHZXRTdXBwbHlEZXRhaWxzLnhhbWxJSwOFAg4CAQFPTk9zAgEDUjRSNwIBAlcFXg4CAWVfBWYTAgFhZwVuDgIBXW8F+wENAgEJ/AEFgwIOAgEEXC9cMAIBaFkwWTYCAWZkOGRGAgFiYZgBYaMCAgFkbDBsPgIBYGkxaUUCAV5wB/oBEgIBDG9qb3kCAQqBAkqBAlYCAQf+AUv+AVUCAQVxCfkBFAIBDXILeRQCAVl6C4EBFAIBVYIBC9oBEwIBJNsBC+ABIwIBHuEBC+gBGQIBGekBC/ABFAIBE/EBC/gBFAIBDnc3dzwCAVx0OHRGAgFafzd/PAIBWHw4fD8CAVaDAQ3ZARgCASeCAXOCAYcBAgEl3gFL3gFVAgEi3QFI3QFRAgEg2wHSAdsB6AECAR/mATfmAUICARrjAZ4B4wHUAgIBHO4BNu4BQQIBF+sBN+sBTQIBFPYBNfYBPwIBEfMBNvMBPAIBD4UBEaMBHAIBQKsBFdUBGgIBKIYBE5IBIwIBSpMBE5oBHAIBRZsBE6IBHAIBQasBI6sBMwIBKa0BGbQBIgIBO7cBGdMBJAIBK5ABpgGQAbsCAgFTjAEZjAH0AQIBS5gBPpgBTwIBSJUBP5UBSAIBRqABP6ABQwIBRJ0BQJ0BTgIBQrIBRLIBUQIBPq8BRa8BTAIBPLgBG9IBIAIBLIwB5gGMAfEBAgFRjAHXAYwB4AECAU+MAaoBjAGzAQIBTYwBvQGMAcEBAgFMuAEpuAE2AgEtugEf0AEqAgEvuwEhwgEqAgE3wwEhxwExAgE0yAEhzwEqAgEwwAFMwAFNAgE6vQFNvQFUAgE4xQG0AcUBxAICATbDAYYCwwGMAgIBNc0BTc0BUwIBM8oBTsoBVQIBMQ==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="534,60" />
-      <sap2010:ViewStateData Id="GetValue_2" sap:VirtualizedContainerService.HintSize="534,106" />
-      <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="534,60" />
-      <sap2010:ViewStateData Id="Assign_10" sap:VirtualizedContainerService.HintSize="464,60" />
-      <sap2010:ViewStateData Id="Assign_13" sap:VirtualizedContainerService.HintSize="464,60" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="869,60" />
+      <sap2010:ViewStateData Id="GetValue_2" sap:VirtualizedContainerService.HintSize="869,106" />
+      <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="869,60" />
+      <sap2010:ViewStateData Id="Assign_10" sap:VirtualizedContainerService.HintSize="799,60" />
+      <sap2010:ViewStateData Id="Assign_13" sap:VirtualizedContainerService.HintSize="799,60" />
       <sap2010:ViewStateData Id="MicrosoftOCR_1" sap:VirtualizedContainerService.HintSize="200,22" />
       <sap2010:ViewStateData Id="GetOCRText_1" sap:VirtualizedContainerService.HintSize="314,168" />
       <sap2010:ViewStateData Id="Assign_7" sap:VirtualizedContainerService.HintSize="314,60" />
@@ -298,44 +297,45 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="If_2" sap:VirtualizedContainerService.HintSize="753,898" />
-      <sap2010:ViewStateData Id="Catch`1_1" sap:VirtualizedContainerService.HintSize="404,21">
+      <sap2010:ViewStateData Id="Catch`1_1" sap:VirtualizedContainerService.HintSize="759,967">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="TryCatch_1" sap:VirtualizedContainerService.HintSize="418,719" />
-      <sap2010:ViewStateData Id="While_2" sap:VirtualizedContainerService.HintSize="464,877" />
-      <sap2010:ViewStateData Id="InvokeWorkflowFile_2" sap:VirtualizedContainerService.HintSize="464,87" />
-      <sap2010:ViewStateData Id="GetValue_1" sap:VirtualizedContainerService.HintSize="464,106" />
-      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="464,60" />
-      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="464,60" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="486,1674">
+      <sap2010:ViewStateData Id="TryCatch_1" sap:VirtualizedContainerService.HintSize="773,1129" />
+      <sap2010:ViewStateData Id="While_2" sap:VirtualizedContainerService.HintSize="799,1287" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_2" sap:VirtualizedContainerService.HintSize="799,87" />
+      <sap2010:ViewStateData Id="GetValue_1" sap:VirtualizedContainerService.HintSize="799,106" />
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="799,60" />
+      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="799,60" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="821,2084">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="508,1798">
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="843,2208">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="While_1" sap:VirtualizedContainerService.HintSize="534,1956" />
-      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="534,60" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="556,2526">
+      <sap2010:ViewStateData Id="While_1" sap:VirtualizedContainerService.HintSize="869,2366" />
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="869,60" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="891,3023">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="GetSupplyDemand_1" sap:VirtualizedContainerService.HintSize="596,2606" />
+      <sap2010:ViewStateData Id="GetSupplyDemand_1" sap:VirtualizedContainerService.HintSize="931,3103" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
