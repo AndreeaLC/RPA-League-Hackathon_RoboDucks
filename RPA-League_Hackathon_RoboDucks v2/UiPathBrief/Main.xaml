@@ -60,7 +60,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RPA Challenge - Shortest Path" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="This is the Main workflow of the project. Here we start by clicking the &quot;Start&quot; button, and we incremeent the number of values processed with 1. We tried using element exist on the map or even on the congratulation in the end, but we ended up in a while loop because apparently this is visible no matter of the state of the application (maybe SPA?)&#xD;&#xA;Pre requsites: N/A&#xD;&#xA;Post requisites: N/A" DisplayName="RPA Challenge - Shortest Path" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="Congratulations" />
       <Variable x:TypeArguments="ui:GenericValue" Name="count" />
@@ -78,7 +78,7 @@
         <InArgument x:TypeArguments="ui:GenericValue">[1]</InArgument>
       </Assign.Value>
     </Assign>
-    <While sap2010:WorkflowViewState.IdRef="While_2" Condition="[count &lt; 6]">
+    <While sap2010:Annotation.AnnotationText="So we decided to hardcode the number of tries in the project to maximum 5, starting from 1. So, while we are not at the end, see if the user made a choice. After get data from the Demand table and the supply table and populate the table. Click submit and create the necessary code." sap2010:WorkflowViewState.IdRef="While_2" Condition="[count &lt; 6]">
       <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:Boolean" Name="HasChosen" />
@@ -103,24 +103,21 @@
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
-        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Supply Get + Complete 2 workflow" UnSafe="False" WorkflowFileName="Supply Get + Complete 2.xaml">
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Supply Get + Complete 2 workflow" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Supply Get + Complete 2.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:InvokeWorkflowFile.Arguments>
-          <sap2010:WorkflowViewState.IdRef>InvokeWorkflowFile_12</sap2010:WorkflowViewState.IdRef>
         </ui:InvokeWorkflowFile>
-        <ui:CommentOut DisplayName="Comment Out">
+        <ui:CommentOut DisplayName="Comment Out" sap2010:WorkflowViewState.IdRef="CommentOut_1">
           <ui:CommentOut.Body>
-            <Sequence DisplayName="Ignored Activities">
+            <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Supply Get + Complete workflow" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Supply Get + Complete.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <scg:Dictionary x:TypeArguments="x:String, Argument" />
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <sap2010:WorkflowViewState.IdRef>Sequence_7</sap2010:WorkflowViewState.IdRef>
             </Sequence>
           </ui:CommentOut.Body>
-          <sap2010:WorkflowViewState.IdRef>CommentOut_1</sap2010:WorkflowViewState.IdRef>
         </ui:CommentOut>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ClickSubmitButton workflow" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="ClickSubmitButton.xaml">
           <ui:InvokeWorkflowFile.Arguments>
@@ -163,7 +160,7 @@
         </ui:InvokeWorkflowFile>
       </Sequence>
     </While>
-    <sads:DebugSymbol.Symbol>d1ZDOlxVc2Vyc1xBbmRyZWVhXERvY3VtZW50c1xHaXRIdWJcUlBBLUxlYWd1ZV9IYWNrYXRob25fUm9ib0R1Y2tzXFVpUGF0aEJyaWVmXE1haW4ueGFtbCQ/A6cBDgIBAUE1QTwCAQJEBUgdAgEnSQVQDgIBI1EFpQENAgEDRj9GZwIBKUS9AUTUAQIBKE43TjoCASZLOEs/AgEkUgekARICAQVRQFFQAgEEVVJVdwIBBlgJXxICAR5gCWQhAgEaZQlpIQIBGGoJbyECARZwCXwZAgEVfQmBASECAROCAQmZARkCAQyaAQmeARcCAQmfAQmjASECAQddO11GAgEhWjxaQwIBH2C9AWDPAQIBHWJMYlcCARtlxgFl4gECARlqkQFqrwECARd9wgF92gECARSTAQ2XASYCARGIAQ+PAR0CAQ2cAZwBnAH5AQIBC5oBowKaAbQCAgEKnwHDAZ8B2wECAQiVAaABlQGEAgIBEo0BQo0BUQIBDooBogGKAcABAgEQ</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d4QBQzpcVXNlcnNcYWxleGFuZHJ1LmZpZXJhc2N1XERlc2t0b3BcVWlQYXRoXFYyXFJQQS1MZWFndWUtSGFja2F0aG9uX1JvYm9EdWNrc1xSUEEtTGVhZ3VlX0hhY2thdGhvbl9Sb2JvRHVja3MgdjJcVWlQYXRoQnJpZWZcTWFpbi54YW1sJD8DpAEOAgEBQTVBPAIBAkQFSB0CASdJBVAOAgEjUQWiAQ0CAQNGP0ZnAgEpRL0BRNQBAgEoTjdOOgIBJks4Sz8CASRSB6EBEgIBBVH+AlGOAwIBBFVSVXcCAQZYCV8SAgEeYAlkIQIBGmUJaSECARhqCW4hAgEWbwl5GQIBFXoJfiECARN/CZYBGQIBDJcBCZsBFwIBCZwBCaABIQIBB107XUYCASFaPFpDAgEfYL0BYM8BAgEdYkxiVwIBG2XGAWXiAQIBGWrJAWrnAQIBF3rCAXraAQIBFJABDZQBJgIBEYUBD4wBHQIBDZkBnAGZAfkBAgELlwGjApcBtAICAQqcAcMBnAHbAQIBCJIBoAGSAYQCAgESigFCigFRAgEOhwGiAYcBwAECARA=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -195,15 +192,22 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="While_2" sap:VirtualizedContainerService.HintSize="754,1718" />
-      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="776,2069">
+      <sap2010:ViewStateData Id="While_2" sap:VirtualizedContainerService.HintSize="754,1775">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="816,2149" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="776,2213">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="816,2333" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

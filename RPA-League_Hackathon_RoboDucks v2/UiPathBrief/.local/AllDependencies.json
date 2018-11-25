@@ -126,176 +126,6 @@
           }
         }
       },
-      "Google.Api.CommonProtos/1.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Protobuf": "3.5.1"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/Google.Api.CommonProtos.dll": {}
-        }
-      },
-      "Google.Api.Gax/2.5.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "10.0.2",
-          "System.Interactive.Async": "3.1.1",
-          "System.Net.Http": "4.1.1"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/Google.Api.Gax.dll": {}
-        }
-      },
-      "Google.Api.Gax.Grpc/2.5.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Api.CommonProtos": "1.3.0",
-          "Google.Api.Gax": "2.5.0",
-          "Google.Apis.Auth": "1.35.1",
-          "Grpc.Auth": "1.13.1",
-          "Grpc.Core": "1.13.1"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/Google.Api.Gax.Grpc.dll": {}
-        }
-      },
-      "Google.Apis/1.35.2": {
-        "type": "package",
-        "dependencies": {
-          "Google.Apis.Core": "1.35.2",
-          "Newtonsoft.Json": "10.0.2"
-        },
-        "frameworkAssemblies": [
-          "System.Net.Http"
-        ],
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/Google.Apis.PlatformServices.dll": {},
-          "lib/net45/Google.Apis.dll": {}
-        }
-      },
-      "Google.Apis.Auth/1.35.2": {
-        "type": "package",
-        "dependencies": {
-          "Google.Apis": "1.35.2",
-          "Google.Apis.Core": "1.35.2"
-        },
-        "frameworkAssemblies": [
-          "System.Net.Http"
-        ],
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/Google.Apis.Auth.PlatformServices.dll": {},
-          "lib/net45/Google.Apis.Auth.dll": {}
-        }
-      },
-      "Google.Apis.Core/1.35.2": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "10.0.2"
-        },
-        "frameworkAssemblies": [
-          "System.Net.Http"
-        ],
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/Google.Apis.Core.dll": {}
-        }
-      },
-      "Google.Cloud.Vision.V1/1.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Api.Gax.Grpc": "2.3.0",
-          "Google.LongRunning": "1.0.0",
-          "Grpc.Core": "1.10.0"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/Google.Cloud.Vision.V1.dll": {}
-        }
-      },
-      "Google.LongRunning/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Api.Gax.Grpc": "2.1.0",
-          "Google.Protobuf": "3.4.1",
-          "Grpc.Core": "1.6.1"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/Google.LongRunning.dll": {}
-        }
-      },
-      "Google.Protobuf/3.6.1": {
-        "type": "package",
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/Google.Protobuf.dll": {}
-        }
-      },
-      "Grpc.Auth/1.15.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Apis.Auth": "1.21.0",
-          "Grpc.Core": "1.15.0"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "System"
-        ],
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/Grpc.Auth.dll": {}
-        }
-      },
-      "Grpc.Core/1.15.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Interactive.Async": "3.1.1"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "System"
-        ],
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/Grpc.Core.dll": {}
-        },
-        "build": {
-          "build/net45/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/osx/native/_._": {
-            "assetType": "native",
-            "rid": "osx"
-          }
-        }
-      },
       "Humanizer.Core/2.4.2": {
         "type": "package",
         "compile": {
@@ -350,7 +180,7 @@
           "lib/Microsoft.VisualStudio.OLE.Interop.dll": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/10.0.3": {
         "type": "package",
         "compile": {
           "lib/net45/_._": {}
@@ -381,135 +211,6 @@
         },
         "runtime": {
           "lib/20/ICSharpCode.SharpZipLib.dll": {}
-        }
-      },
-      "System.Interactive.Async/3.2.0": {
-        "type": "package",
-        "compile": {
-          "lib/net46/_._": {}
-        },
-        "runtime": {
-          "lib/net46/System.Interactive.Async.dll": {}
-        }
-      },
-      "System.Net.Http/4.3.3": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.Cryptography.X509Certificates": "4.3.0"
-        },
-        "frameworkAssemblies": [
-          "System",
-          "System.Core",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net46/_._": {}
-        },
-        "runtime": {
-          "lib/net46/System.Net.Http.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/net46/System.Net.Http.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Security.Cryptography.Algorithms/4.3.1": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.Cryptography.Primitives": "4.3.0"
-        },
-        "frameworkAssemblies": [
-          "System.Core",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Cryptography.Algorithms.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/osx/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
-            "assetType": "runtime",
-            "rid": "osx"
-          },
-          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/net461/System.Security.Cryptography.Algorithms.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Security.Cryptography.Encoding/4.3.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net46/_._": {}
-        },
-        "runtime": {
-          "lib/net46/System.Security.Cryptography.Encoding.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/net46/System.Security.Cryptography.Encoding.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Security.Cryptography.Primitives/4.3.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net46/_._": {}
-        },
-        "runtime": {
-          "lib/net46/System.Security.Cryptography.Primitives.dll": {}
-        }
-      },
-      "System.Security.Cryptography.X509Certificates/4.3.2": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.Cryptography.Algorithms": "4.3.0",
-          "System.Security.Cryptography.Encoding": "4.3.0"
-        },
-        "frameworkAssemblies": [
-          "System",
-          "System.Core",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Cryptography.X509Certificates.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/net461/System.Security.Cryptography.X509Certificates.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
         }
       },
       "UiPath/9.0.6877.24355": {
@@ -569,40 +270,6 @@
           "lib/net452/ja/UiPath.Excel.resources.dll": {
             "locale": "ja"
           }
-        }
-      },
-      "UiPath.GoogleVision.Activities/0.1.6852.1955": {
-        "type": "package",
-        "dependencies": {
-          "Google.Api.Gax.Grpc": "2.5.0",
-          "Google.Apis.Auth": "1.35.2",
-          "Google.Cloud.Vision.V1": "1.2.0",
-          "Google.Protobuf": "3.6.1",
-          "Grpc.Auth": "1.15.0",
-          "Grpc.Core": "1.15.0",
-          "Newtonsoft.Json": "10.0.3",
-          "System.Interactive.Async": "3.2.0",
-          "System.Net.Http": "4.3.3",
-          "System.Security.Cryptography.Algorithms": "4.3.1",
-          "System.Security.Cryptography.X509Certificates": "4.3.2"
-        },
-        "compile": {
-          "lib/net452/_._": {}
-        },
-        "runtime": {
-          "lib/net452/Google.Api.CommonProtos.dll": {},
-          "lib/net452/Google.Api.Gax.Grpc.dll": {},
-          "lib/net452/Google.Api.Gax.dll": {},
-          "lib/net452/Google.Cloud.Vision.V1.dll": {},
-          "lib/net452/Google.LongRunning.dll": {},
-          "lib/net452/Google.Protobuf.dll": {},
-          "lib/net452/Grpc.Auth.dll": {},
-          "lib/net452/Grpc.Core.dll": {},
-          "lib/net452/UiPath.GoogleVision.Activities.Design.dll": {},
-          "lib/net452/UiPath.GoogleVision.Activities.dll": {},
-          "lib/net452/UiPath.GoogleVision.dll": {},
-          "lib/net452/grpc_csharp_ext.x64.dll": {},
-          "lib/net452/grpc_csharp_ext.x86.dll": {}
         }
       },
       "UiPath.Mail.Activities/1.2.6863.29868": {
@@ -763,19 +430,6 @@
           "lib/net452/UiPath.Vision.Core.dll": {},
           "lib/net452/UiPath.Vision.dll": {}
         }
-      },
-      "UiPathTeam.Cognitive.Microsoft.OCR.Design/1.0.6814.41316": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "11.0.2"
-        },
-        "compile": {
-          "lib/net452/_._": {}
-        },
-        "runtime": {
-          "lib/net452/UiPathTeam.Cognitive.Microsoft.OCR.Design.dll": {},
-          "lib/net452/UiPathTeam.VisionOCR.Activities.dll": {}
-        }
       }
     }
   },
@@ -900,10 +554,11 @@
       ]
     },
     "CsvHelper/2.13.5": {
-      "sha512": "fC8DPi/YTcZ8uXFiAeuT9EpsR2TE5cSJ2jg/4tht/Oen6az/djebpYoCQEtI33RfNrSZ533SedOknlWtUTX3fw==",
+      "sha512": "Y3SQyxU86+V5sZm6X93ko3kToYbiGLcVYW5tvK8rrrk5b1lvw2Nh5NewUJmkw0gMRHF+jANi7pGnb5p+4rVPOw==",
       "type": "package",
       "path": "csvhelper/2.13.5",
       "files": [
+        ".signature.p7s",
         "csvhelper.2.13.5.nupkg.sha512",
         "csvhelper.nuspec",
         "lib/net20/CsvHelper.dll",
@@ -958,207 +613,6 @@
         "tools/install.ps1"
       ]
     },
-    "Google.Api.CommonProtos/1.3.0": {
-      "sha512": "x5j71Q4giIJ/qAM8+/ZWPpWw8F8IDhdJjq6tOh/lEsJg5hd2BAa9pZkIUVG/qez9SA4RFAW6mQ9K2WgrZ+LlfA==",
-      "type": "package",
-      "path": "google.api.commonprotos/1.3.0",
-      "files": [
-        ".signature.p7s",
-        "google.api.commonprotos.1.3.0.nupkg.sha512",
-        "google.api.commonprotos.nuspec",
-        "lib/net45/Google.Api.CommonProtos.dll",
-        "lib/net45/Google.Api.CommonProtos.pdb",
-        "lib/net45/Google.Api.CommonProtos.xml",
-        "lib/netstandard1.3/Google.Api.CommonProtos.dll",
-        "lib/netstandard1.3/Google.Api.CommonProtos.pdb",
-        "lib/netstandard1.3/Google.Api.CommonProtos.xml"
-      ]
-    },
-    "Google.Api.Gax/2.5.0": {
-      "sha512": "p5hd6/8GslKY2LSQo9YAAyE3nbknYVIh38zNDlU9MwMccCOpf4QhQUdC+12R5zWeudCalZBFO3lChmuSU6wBow==",
-      "type": "package",
-      "path": "google.api.gax/2.5.0",
-      "files": [
-        ".signature.p7s",
-        "google.api.gax.2.5.0.nupkg.sha512",
-        "google.api.gax.nuspec",
-        "lib/net45/Google.Api.Gax.dll",
-        "lib/net45/Google.Api.Gax.pdb",
-        "lib/net45/Google.Api.Gax.xml",
-        "lib/netstandard1.3/Google.Api.Gax.dll",
-        "lib/netstandard1.3/Google.Api.Gax.pdb",
-        "lib/netstandard1.3/Google.Api.Gax.xml"
-      ]
-    },
-    "Google.Api.Gax.Grpc/2.5.0": {
-      "sha512": "IQ0Z4PRNMhuyHbr4oFD0+CqloqDuwo2rPnq52kic6lrF4VkOwDtTP+ICMQ5VzwYBOiMUUt20XJZm8Gf6fs8Ahw==",
-      "type": "package",
-      "path": "google.api.gax.grpc/2.5.0",
-      "files": [
-        ".signature.p7s",
-        "google.api.gax.grpc.2.5.0.nupkg.sha512",
-        "google.api.gax.grpc.nuspec",
-        "lib/net45/Google.Api.Gax.Grpc.dll",
-        "lib/net45/Google.Api.Gax.Grpc.pdb",
-        "lib/net45/Google.Api.Gax.Grpc.xml",
-        "lib/netstandard1.5/Google.Api.Gax.Grpc.dll",
-        "lib/netstandard1.5/Google.Api.Gax.Grpc.pdb",
-        "lib/netstandard1.5/Google.Api.Gax.Grpc.xml"
-      ]
-    },
-    "Google.Apis/1.35.2": {
-      "sha512": "kckpDbjCQA4lN9ZJ6Hb0SlWfg8e2ei0rqh+6bpuZLgB8MAL0tjwKZyr+d+iorKfB+SlmIgTtVfgDea1aH3dpbA==",
-      "type": "package",
-      "path": "google.apis/1.35.2",
-      "files": [
-        ".signature.p7s",
-        "google.apis.1.35.2.nupkg.sha512",
-        "google.apis.nuspec",
-        "lib/net45/Google.Apis.PlatformServices.dll",
-        "lib/net45/Google.Apis.dll",
-        "lib/net45/Google.Apis.pdb",
-        "lib/net45/Google.Apis.xml",
-        "lib/netstandard1.3/Google.Apis.dll",
-        "lib/netstandard1.3/Google.Apis.pdb",
-        "lib/netstandard1.3/Google.Apis.xml",
-        "lib/netstandard2.0/Google.Apis.dll",
-        "lib/netstandard2.0/Google.Apis.pdb",
-        "lib/netstandard2.0/Google.Apis.xml"
-      ]
-    },
-    "Google.Apis.Auth/1.35.2": {
-      "sha512": "pcXQGo6gjY9Tt7+UkPcOYnh/hvBbCEKif+JEUSijkpR8Z8TxIOKcDOEhRNHXv7ohufg89hllzojm+4ae+wFQFA==",
-      "type": "package",
-      "path": "google.apis.auth/1.35.2",
-      "files": [
-        ".signature.p7s",
-        "google.apis.auth.1.35.2.nupkg.sha512",
-        "google.apis.auth.nuspec",
-        "lib/net45/Google.Apis.Auth.PlatformServices.dll",
-        "lib/net45/Google.Apis.Auth.dll",
-        "lib/net45/Google.Apis.Auth.pdb",
-        "lib/net45/Google.Apis.Auth.xml",
-        "lib/netstandard1.3/Google.Apis.Auth.PlatformServices.dll",
-        "lib/netstandard1.3/Google.Apis.Auth.dll",
-        "lib/netstandard1.3/Google.Apis.Auth.pdb",
-        "lib/netstandard1.3/Google.Apis.Auth.xml",
-        "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
-        "lib/netstandard2.0/Google.Apis.Auth.dll",
-        "lib/netstandard2.0/Google.Apis.Auth.pdb",
-        "lib/netstandard2.0/Google.Apis.Auth.xml"
-      ]
-    },
-    "Google.Apis.Core/1.35.2": {
-      "sha512": "MbCIK1KxWT3yQJtuI77NwzGPmNmAaEPSYdhY9ObdypQkxe9yApw75L2V/30/YHslCc1fNrlJ5HRE9DEp90jOIw==",
-      "type": "package",
-      "path": "google.apis.core/1.35.2",
-      "files": [
-        ".signature.p7s",
-        "google.apis.core.1.35.2.nupkg.sha512",
-        "google.apis.core.nuspec",
-        "lib/net45/Google.Apis.Core.dll",
-        "lib/net45/Google.Apis.Core.pdb",
-        "lib/net45/Google.Apis.Core.xml",
-        "lib/netstandard1.3/Google.Apis.Core.dll",
-        "lib/netstandard1.3/Google.Apis.Core.pdb",
-        "lib/netstandard1.3/Google.Apis.Core.xml",
-        "lib/netstandard2.0/Google.Apis.Core.dll",
-        "lib/netstandard2.0/Google.Apis.Core.pdb",
-        "lib/netstandard2.0/Google.Apis.Core.xml"
-      ]
-    },
-    "Google.Cloud.Vision.V1/1.2.0": {
-      "sha512": "nh0RdtApCNTnwJ6pLGt5KyN2fLX4BjZOgEJOsAmqcLp+uuPqvdNSYC1/svgnwc01B2A+h4NSa2PMgkQejsj5VA==",
-      "type": "package",
-      "path": "google.cloud.vision.v1/1.2.0",
-      "files": [
-        ".signature.p7s",
-        "google.cloud.vision.v1.1.2.0.nupkg.sha512",
-        "google.cloud.vision.v1.nuspec",
-        "lib/net45/Google.Cloud.Vision.V1.dll",
-        "lib/net45/Google.Cloud.Vision.V1.pdb",
-        "lib/net45/Google.Cloud.Vision.V1.xml",
-        "lib/netstandard1.5/Google.Cloud.Vision.V1.dll",
-        "lib/netstandard1.5/Google.Cloud.Vision.V1.pdb",
-        "lib/netstandard1.5/Google.Cloud.Vision.V1.xml"
-      ]
-    },
-    "Google.LongRunning/1.0.0": {
-      "sha512": "f20BuEQJNb+uxaXBN85FvW9XJkg0vOQPOc2oLLcrG3nvPYK1NA/5wXFkGOGgJ3zw+KohStISwdR5hjFEDl5jOA==",
-      "type": "package",
-      "path": "google.longrunning/1.0.0",
-      "files": [
-        ".signature.p7s",
-        "google.longrunning.1.0.0.nupkg.sha512",
-        "google.longrunning.nuspec",
-        "lib/net45/Google.LongRunning.dll",
-        "lib/net45/Google.LongRunning.pdb",
-        "lib/net45/Google.LongRunning.xml",
-        "lib/netstandard1.5/Google.LongRunning.dll",
-        "lib/netstandard1.5/Google.LongRunning.pdb",
-        "lib/netstandard1.5/Google.LongRunning.xml"
-      ]
-    },
-    "Google.Protobuf/3.6.1": {
-      "sha512": "D/h9IZl76jjfM5VlPzG235Zdys9RKXNLYbRGm2fa6Y2UshTqAvYBPIydNOvNTEa24DER/m/zvelHlLO9n1GtNQ==",
-      "type": "package",
-      "path": "google.protobuf/3.6.1",
-      "files": [
-        ".signature.p7s",
-        "google.protobuf.3.6.1.nupkg.sha512",
-        "google.protobuf.nuspec",
-        "lib/net45/Google.Protobuf.dll",
-        "lib/net45/Google.Protobuf.xml",
-        "lib/netstandard1.0/Google.Protobuf.dll",
-        "lib/netstandard1.0/Google.Protobuf.xml"
-      ]
-    },
-    "Grpc.Auth/1.15.0": {
-      "sha512": "YPykKhDUE3ljNlb/wi/F30q0g6Q795D48AFspO6RyDg7ymGx3+7l3HKi5rSF+GqELMqmP0tVSoSOdMIiZ+RSRw==",
-      "type": "package",
-      "path": "grpc.auth/1.15.0",
-      "files": [
-        ".signature.p7s",
-        "grpc.auth.1.15.0.nupkg.sha512",
-        "grpc.auth.nuspec",
-        "lib/net45/Grpc.Auth.dll",
-        "lib/net45/Grpc.Auth.pdb",
-        "lib/net45/Grpc.Auth.xml",
-        "lib/netstandard1.5/Grpc.Auth.dll",
-        "lib/netstandard1.5/Grpc.Auth.pdb",
-        "lib/netstandard1.5/Grpc.Auth.xml"
-      ]
-    },
-    "Grpc.Core/1.15.0": {
-      "sha512": "WDe2rOcct3O8fVcq/99+Zif023gJIrEEXw9rPT4+y/0ZjiSW2Iug9nZCxA3s87tZvLpgyu/Wkxep4rb2C466CA==",
-      "type": "package",
-      "path": "grpc.core/1.15.0",
-      "files": [
-        ".signature.p7s",
-        "build/MonoAndroid10/Grpc.Core.targets",
-        "build/Xamarin.iOS10/Grpc.Core.targets",
-        "build/net45/Grpc.Core.targets",
-        "grpc.core.1.15.0.nupkg.sha512",
-        "grpc.core.nuspec",
-        "lib/net45/Grpc.Core.dll",
-        "lib/net45/Grpc.Core.pdb",
-        "lib/net45/Grpc.Core.xml",
-        "lib/netstandard1.5/Grpc.Core.dll",
-        "lib/netstandard1.5/Grpc.Core.pdb",
-        "lib/netstandard1.5/Grpc.Core.xml",
-        "native/android/arm64-v8a/libgrpc_csharp_ext.so",
-        "native/android/armeabi-v7a/libgrpc_csharp_ext.so",
-        "native/android/x86/libgrpc_csharp_ext.so",
-        "native/ios/universal/libgrpc.a",
-        "native/ios/universal/libgrpc_csharp_ext.a",
-        "runtimes/linux/native/libgrpc_csharp_ext.x64.so",
-        "runtimes/linux/native/libgrpc_csharp_ext.x86.so",
-        "runtimes/osx/native/libgrpc_csharp_ext.x64.dylib",
-        "runtimes/osx/native/libgrpc_csharp_ext.x86.dylib",
-        "runtimes/win/native/grpc_csharp_ext.x64.dll",
-        "runtimes/win/native/grpc_csharp_ext.x86.dll"
-      ]
-    },
     "Humanizer.Core/2.4.2": {
       "sha512": "bdHOGpZNL92TebkGuaBe/RpxUrDeRDZQLRdFPEbM+miGV1V3ITmw6iZtGYzp44DUd60Fmw5mgHG2HaFSC4hQdQ==",
       "type": "package",
@@ -1210,10 +664,11 @@
       ]
     },
     "Microsoft.Rest.ClientRuntime/2.3.10": {
-      "sha512": "JO9CzV1hvjtrIzq06gJ5nNv7GV24Xz3Y3O9vx7fCe7ndNA0NmD3fZ9JUgFir2UvJ2/+9vvCo/6RXjyfywvQQIw==",
+      "sha512": "a30J6t7LRkYx974tLaRnJc/dYZ1M7uhc5vdgULxdhL7HJNJydG7e+jyAVD15gK+vFR1i9MH+5Ch9t1zhb/Lp1g==",
       "type": "package",
       "path": "microsoft.rest.clientruntime/2.3.10",
       "files": [
+        ".signature.p7s",
         "lib/net452/Microsoft.Rest.ClientRuntime.dll",
         "lib/net452/Microsoft.Rest.ClientRuntime.runtimeconfig.json",
         "lib/net452/Microsoft.Rest.ClientRuntime.xml",
@@ -1235,10 +690,10 @@
         "microsoft.visualstudio.ole.interop.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "znZGbws7E4BA9jxNZ7FuiIRI3C9hrgatVQSTKhIYZYNOud4M5VfGlTYi6RdYO5sQrebFuF/g9UEV3hOxDMXF6Q==",
+    "Newtonsoft.Json/10.0.3": {
+      "sha512": "MoATFm6YJyk5OdqDdxDWfKe5dkY3Cygu0wrpKPH/LbWtMmSuD/3G/JIInt9sIJN7hKQOFYCIb2UjLc2vO5byQQ==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/10.0.3",
       "files": [
         ".signature.p7s",
         "LICENSE.md",
@@ -1254,14 +709,13 @@
         "lib/netstandard1.0/Newtonsoft.Json.xml",
         "lib/netstandard1.3/Newtonsoft.Json.dll",
         "lib/netstandard1.3/Newtonsoft.Json.xml",
-        "lib/netstandard2.0/Newtonsoft.Json.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.xml",
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.10.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
       ]
     },
     "NPOI/2.2.1": {
@@ -1301,210 +755,6 @@
         "lib/SL4/SharpZipLib.Silverlight4.dll",
         "sharpziplib.0.86.0.nupkg.sha512",
         "sharpziplib.nuspec"
-      ]
-    },
-    "System.Interactive.Async/3.2.0": {
-      "sha512": "T3nigy9yShklMyVu7I2TvlVMRy2vUn9oQeBaRy0KZcOptyy+rUbekYaXxoa3s0h2tWT3UVtzrGkQC89CBbCtlg==",
-      "type": "package",
-      "path": "system.interactive.async/3.2.0",
-      "files": [
-        ".signature.p7s",
-        "lib/net45/System.Interactive.Async.dll",
-        "lib/net45/System.Interactive.Async.xml",
-        "lib/net46/System.Interactive.Async.dll",
-        "lib/net46/System.Interactive.Async.xml",
-        "lib/netstandard1.0/System.Interactive.Async.dll",
-        "lib/netstandard1.0/System.Interactive.Async.xml",
-        "lib/netstandard1.3/System.Interactive.Async.dll",
-        "lib/netstandard1.3/System.Interactive.Async.xml",
-        "lib/netstandard2.0/System.Interactive.Async.dll",
-        "lib/netstandard2.0/System.Interactive.Async.xml",
-        "system.interactive.async.3.2.0.nupkg.sha512",
-        "system.interactive.async.nuspec"
-      ]
-    },
-    "System.Net.Http/4.3.3": {
-      "sha512": "K8Bf1xc41hhxmOp1X3W/y1eRyCwTD5JdEua97gn+7FXCwUeWKK9joR/bTbud07Via/S4W4oYewyzmFeIbt5w4A==",
-      "type": "package",
-      "path": "system.net.http/4.3.3",
-      "files": [
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/Xamarinmac20/_._",
-        "lib/monoandroid10/_._",
-        "lib/monotouch10/_._",
-        "lib/net45/_._",
-        "lib/net46/System.Net.Http.dll",
-        "lib/portable-net45+win8+wpa81/_._",
-        "lib/win8/_._",
-        "lib/wpa81/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/Xamarinmac20/_._",
-        "ref/monoandroid10/_._",
-        "ref/monotouch10/_._",
-        "ref/net45/_._",
-        "ref/net46/System.Net.Http.dll",
-        "ref/netcore50/System.Net.Http.dll",
-        "ref/netstandard1.1/System.Net.Http.dll",
-        "ref/netstandard1.3/System.Net.Http.dll",
-        "ref/portable-net45+win8+wpa81/_._",
-        "ref/win8/_._",
-        "ref/wpa81/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll",
-        "runtimes/win/lib/net46/System.Net.Http.dll",
-        "runtimes/win/lib/netcore50/System.Net.Http.dll",
-        "runtimes/win/lib/netstandard1.3/System.Net.Http.dll",
-        "system.net.http.4.3.3.nupkg.sha512",
-        "system.net.http.nuspec"
-      ]
-    },
-    "System.Security.Cryptography.Algorithms/4.3.1": {
-      "sha512": "qTfbXRle6+C7ulWdumAv/V/ak+qk9fs6Ucn67elOeO16+f9bAjda617+kBjTbqyWGEM2D3pJ5TN5ni+Xjg8zJQ==",
-      "type": "package",
-      "path": "system.security.cryptography.algorithms/4.3.1",
-      "files": [
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Security.Cryptography.Algorithms.dll",
-        "lib/net461/System.Security.Cryptography.Algorithms.dll",
-        "lib/net463/System.Security.Cryptography.Algorithms.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Security.Cryptography.Algorithms.dll",
-        "ref/net461/System.Security.Cryptography.Algorithms.dll",
-        "ref/net463/System.Security.Cryptography.Algorithms.dll",
-        "ref/netstandard1.3/System.Security.Cryptography.Algorithms.dll",
-        "ref/netstandard1.4/System.Security.Cryptography.Algorithms.dll",
-        "ref/netstandard1.6/System.Security.Cryptography.Algorithms.dll",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/osx/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll",
-        "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll",
-        "runtimes/win/lib/net46/System.Security.Cryptography.Algorithms.dll",
-        "runtimes/win/lib/net461/System.Security.Cryptography.Algorithms.dll",
-        "runtimes/win/lib/net463/System.Security.Cryptography.Algorithms.dll",
-        "runtimes/win/lib/netcore50/System.Security.Cryptography.Algorithms.dll",
-        "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll",
-        "system.security.cryptography.algorithms.4.3.1.nupkg.sha512",
-        "system.security.cryptography.algorithms.nuspec"
-      ]
-    },
-    "System.Security.Cryptography.Encoding/4.3.0": {
-      "sha512": "4K76Y6CMYqnuj/2uvucQGdq2X2j5C8wM7/Yl2oxjEGTWepuAzXuvzxQcIccZcqchK/AAmsaiZe24lZNdno7VyA==",
-      "type": "package",
-      "path": "system.security.cryptography.encoding/4.3.0",
-      "files": [
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Security.Cryptography.Encoding.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Security.Cryptography.Encoding.dll",
-        "ref/netstandard1.3/System.Security.Cryptography.Encoding.dll",
-        "ref/netstandard1.3/System.Security.Cryptography.Encoding.xml",
-        "ref/netstandard1.3/de/System.Security.Cryptography.Encoding.xml",
-        "ref/netstandard1.3/es/System.Security.Cryptography.Encoding.xml",
-        "ref/netstandard1.3/fr/System.Security.Cryptography.Encoding.xml",
-        "ref/netstandard1.3/it/System.Security.Cryptography.Encoding.xml",
-        "ref/netstandard1.3/ja/System.Security.Cryptography.Encoding.xml",
-        "ref/netstandard1.3/ko/System.Security.Cryptography.Encoding.xml",
-        "ref/netstandard1.3/ru/System.Security.Cryptography.Encoding.xml",
-        "ref/netstandard1.3/zh-hans/System.Security.Cryptography.Encoding.xml",
-        "ref/netstandard1.3/zh-hant/System.Security.Cryptography.Encoding.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll",
-        "runtimes/win/lib/net46/System.Security.Cryptography.Encoding.dll",
-        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll",
-        "system.security.cryptography.encoding.4.3.0.nupkg.sha512",
-        "system.security.cryptography.encoding.nuspec"
-      ]
-    },
-    "System.Security.Cryptography.Primitives/4.3.0": {
-      "sha512": "jeRd2cHsedEcqHT1rcAK4j41VLlcSKj+dfv7d4rIEcUIi2/MvSNviTXjKXBSNxpG40UzlPrYlRZ7pzUadmBJtw==",
-      "type": "package",
-      "path": "system.security.cryptography.primitives/4.3.0",
-      "files": [
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Security.Cryptography.Primitives.dll",
-        "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Security.Cryptography.Primitives.dll",
-        "ref/netstandard1.3/System.Security.Cryptography.Primitives.dll",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.security.cryptography.primitives.4.3.0.nupkg.sha512",
-        "system.security.cryptography.primitives.nuspec"
-      ]
-    },
-    "System.Security.Cryptography.X509Certificates/4.3.2": {
-      "sha512": "nB8SLRH4rxrJyPPCJaVFCSuHyyg6nrX3cNVAshHRqi7hz5WE0k/rilz++tVb5UN63iidEX57Lly97WMonfoPog==",
-      "type": "package",
-      "path": "system.security.cryptography.x509certificates/4.3.2",
-      "files": [
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Security.Cryptography.X509Certificates.dll",
-        "lib/net461/System.Security.Cryptography.X509Certificates.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Security.Cryptography.X509Certificates.dll",
-        "ref/net461/System.Security.Cryptography.X509Certificates.dll",
-        "ref/netstandard1.3/System.Security.Cryptography.X509Certificates.dll",
-        "ref/netstandard1.4/System.Security.Cryptography.X509Certificates.dll",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll",
-        "runtimes/win/lib/net46/System.Security.Cryptography.X509Certificates.dll",
-        "runtimes/win/lib/net461/System.Security.Cryptography.X509Certificates.dll",
-        "runtimes/win/lib/netcore50/System.Security.Cryptography.X509Certificates.dll",
-        "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll",
-        "system.security.cryptography.x509certificates.4.3.2.nupkg.sha512",
-        "system.security.cryptography.x509certificates.nuspec"
       ]
     },
     "UiPath/9.0.6877.24355": {
@@ -1580,34 +830,6 @@
         "lib/net452/ja/UiPath.Excel.resources.dll",
         "uipath.excel.activities.2.4.6863.30657.nupkg.sha512",
         "uipath.excel.activities.nuspec"
-      ]
-    },
-    "UiPath.GoogleVision.Activities/0.1.6852.1955": {
-      "sha512": "LI1x6cLq16aQIdH6lTqpZitY8kJt19oATVVWi5VuKQtkBZ9g2FoNPfyZxBkp0W2DoDyIJcmyJosDMCVL7zSbQQ==",
-      "type": "package",
-      "path": "uipath.googlevision.activities/0.1.6852.1955",
-      "files": [
-        "content/grpc_csharp_ext.x64.dll",
-        "content/grpc_csharp_ext.x86.dll",
-        "content/libgrpc_csharp_ext.x64.dylib",
-        "content/libgrpc_csharp_ext.x64.so",
-        "content/libgrpc_csharp_ext.x86.dylib",
-        "content/libgrpc_csharp_ext.x86.so",
-        "lib/net452/Google.Api.CommonProtos.dll",
-        "lib/net452/Google.Api.Gax.Grpc.dll",
-        "lib/net452/Google.Api.Gax.dll",
-        "lib/net452/Google.Cloud.Vision.V1.dll",
-        "lib/net452/Google.LongRunning.dll",
-        "lib/net452/Google.Protobuf.dll",
-        "lib/net452/Grpc.Auth.dll",
-        "lib/net452/Grpc.Core.dll",
-        "lib/net452/UiPath.GoogleVision.Activities.Design.dll",
-        "lib/net452/UiPath.GoogleVision.Activities.dll",
-        "lib/net452/UiPath.GoogleVision.dll",
-        "lib/net452/grpc_csharp_ext.x64.dll",
-        "lib/net452/grpc_csharp_ext.x86.dll",
-        "uipath.googlevision.activities.0.1.6852.1955.nupkg.sha512",
-        "uipath.googlevision.activities.nuspec"
       ]
     },
     "UiPath.Mail.Activities/1.2.6863.29868": {
@@ -1760,17 +982,6 @@
         "uipath.vision.1.1.0.nupkg.sha512",
         "uipath.vision.nuspec"
       ]
-    },
-    "UiPathTeam.Cognitive.Microsoft.OCR.Design/1.0.6814.41316": {
-      "sha512": "DYo92a88byPFGAHlMqA7dpWEJUZksqx3P9SPvsuwOohhwgzrDsMcDmjn9KUERt8xh0Z2NGhmvo8ZPlEpGtYQJQ==",
-      "type": "package",
-      "path": "uipathteam.cognitive.microsoft.ocr.design/1.0.6814.41316",
-      "files": [
-        "lib/net452/UiPathTeam.Cognitive.Microsoft.OCR.Design.dll",
-        "lib/net452/UiPathTeam.VisionOCR.Activities.dll",
-        "uipathteam.cognitive.microsoft.ocr.design.1.0.6814.41316.nupkg.sha512",
-        "uipathteam.cognitive.microsoft.ocr.design.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -1786,15 +997,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Andreea\\.nuget\\packages\\": {}
+    "C:\\Users\\alexandru.fierascu\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "UiPathBrief",
       "projectName": "UiPathBrief",
-      "projectPath": "C:\\Users\\Andreea\\Documents\\GitHub\\RPA-League_Hackathon_RoboDucks\\UiPathBrief\\.local",
-      "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andreea\\Documents\\GitHub\\RPA-League_Hackathon_RoboDucks\\UiPathBrief\\.local"
+      "projectPath": "C:\\Users\\alexandru.fierascu\\Desktop\\UiPath\\V2\\RPA-League-Hackathon_RoboDucks\\RPA-League_Hackathon_RoboDucks v2\\UiPathBrief\\.local",
+      "packagesPath": "C:\\Users\\alexandru.fierascu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexandru.fierascu\\Desktop\\UiPath\\V2\\RPA-League-Hackathon_RoboDucks\\RPA-League_Hackathon_RoboDucks v2\\UiPathBrief\\.local"
     },
     "frameworks": {
       "net461": {
@@ -1837,5 +1048,25 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package UiPathTeam.Cognitive.Microsoft.OCR.Design. No packages exist with this id in source(s): C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\, C:\\Users\\alexandru.fierascu\\AppData\\Local\\UiPath\\app-18.4.0\\.\\Packages, Community, https://api.nuget.org/v3/index.json, https://gallery.uipath.com/api/v2, https://www.myget.org/F/workflow/, Local, Microsoft Visual Studio Offline Packages, nuget.org, Official",
+      "libraryId": "UiPathTeam.Cognitive.Microsoft.OCR.Design",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package UiPath.GoogleVision.Activities. No packages exist with this id in source(s): C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\, C:\\Users\\alexandru.fierascu\\AppData\\Local\\UiPath\\app-18.4.0\\.\\Packages, Community, https://api.nuget.org/v3/index.json, https://gallery.uipath.com/api/v2, https://www.myget.org/F/workflow/, Local, Microsoft Visual Studio Offline Packages, nuget.org, Official",
+      "libraryId": "UiPath.GoogleVision.Activities",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    }
+  ]
 }

@@ -65,10 +65,9 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="This flowchart cleans the input data based on some rules&#xD;&#xA;Pre requisites: in_data which needs to be cleaned&#xD;&#xA;Post requisites: out_cleanedData" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.StartNode>
       <FlowDecision x:Name="__ReferenceID0" Condition="[in_data.Contains(&quot;cit&quot;)]" DisplayName="Flow Decision" sap2010:WorkflowViewState.IdRef="FlowDecision_8">
         <FlowDecision.True>
@@ -213,7 +212,7 @@
     <x:Reference>__ReferenceID13</x:Reference>
     <x:Reference>__ReferenceID14</x:Reference>
     <x:Reference>__ReferenceID15</x:Reference>
-    <sads:DebugSymbol.Symbol>d2RDOlxVc2Vyc1xhbGV4YW5kcnUuZmllcmFzY3VcRGVza3RvcFxVaVBhdGhcUlBBLUxlYWd1ZV9IYWNrYXRob25fUm9ib0R1Y2tzXFVpUGF0aEJyaWVmXENsZWFuRGF0YS54YW1sIUcD2QEPAgEBSTdJXAIBM1c7V4UBAgEwZT9laAIBLnNDc5QBAgErgQFHgQFtAgEpjwFMjwFyAgEnnQFQnQGgAQIBJKsBVKsBegIBIq4BKbUBMgIBHqABJacBLgIBGpIBIZkBKgIBFoQBHYsBJgIBEnYZfSICAQ5oFW8eAgEKWhFhGgIBBkwNUxYCAQKzAVSzAVgCASGwAVWwAWYCAR+lAVClAV8CAR2iAVGiAWICARuXAUyXAVECARmUAU2UAV4CAReJAUiJAU0CARWGAUmGAVoCARN7RHtUAgEReEV4VgIBD21AbU0CAQ1qQWpSAgELXzxfRAIBCVw9XE4CAQdROFE8AgEFTjlOSgIBAw==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d4kBQzpcVXNlcnNcYWxleGFuZHJ1LmZpZXJhc2N1XERlc2t0b3BcVWlQYXRoXFYyXFJQQS1MZWFndWUtSGFja2F0aG9uX1JvYm9EdWNrc1xSUEEtTGVhZ3VlX0hhY2thdGhvbl9Sb2JvRHVja3MgdjJcVWlQYXRoQnJpZWZcQ2xlYW5EYXRhLnhhbWwhRgPYAQ8CAQFIN0hcAgEzVjtWhQECATBkP2RoAgEuckNylAECASuAAUeAAW0CASmOAUyOAXICASecAVCcAaABAgEkqgFUqgF6AgEirQEptAEyAgEenwElpgEuAgEakQEhmAEqAgEWgwEdigEmAgESdRl8IgIBDmcVbh4CAQpZEWAaAgEGSw1SFgIBArIBVLIBWAIBIa8BVa8BZgIBH6QBUKQBXwIBHaEBUaEBYgIBG5YBTJYBUQIBGZMBTZMBXgIBF4gBSIgBTQIBFYUBSYUBWgIBE3pEelQCARF3RXdWAgEPbEBsTQIBDWlBaVICAQtePF5EAgEJWz1bTgIBB1A4UDwCAQVNOU1KAgED</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -424,7 +423,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="1162,1155">
+      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="1162,1212">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -433,10 +432,11 @@
             <av:PointCollection x:Key="ConnectorLocation">270,40 259.75,40 259.75,186.5</av:PointCollection>
             <x:Double x:Key="Height">1119.432</x:Double>
             <x:Double x:Key="Width">1147.5</x:Double>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="CleanData_1" sap:VirtualizedContainerService.HintSize="1202,1235" />
+      <sap2010:ViewStateData Id="CleanData_1" sap:VirtualizedContainerService.HintSize="1202,1292" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

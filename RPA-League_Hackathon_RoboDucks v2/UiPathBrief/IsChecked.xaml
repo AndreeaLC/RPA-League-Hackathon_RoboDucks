@@ -58,10 +58,9 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap2010:Annotation.AnnotationText="This annotation verifies the 2 checkboxes, Urgent and Permit required and checkes the one accordingly to the table" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="urgentUnchecked" />
       <Variable x:TypeArguments="x:Boolean" Name="permitChecked" />
@@ -202,7 +201,7 @@
         </ui:Click>
       </If.Then>
     </If>
-    <sads:DebugSymbol.Symbol>d1tDOlxVc2Vyc1xBbmRyZWVhXERvY3VtZW50c1xHaXRIdWJcUlBBLUxlYWd1ZV9IYWNrYXRob25fUm9ib0R1Y2tzXFVpUGF0aEJyaWVmXElzQ2hlY2tlZC54YW1sJUADzgEOAgEBRwVeFQIBJl8FdhUCAR53BYkBCgIBGIoBBaEBFQIBEKIBBbkBFQIBCLoBBcwBCgIBAlgJXCICASxNC1QbAgEncAl0IgIBJGULbBsCAR93E3c7AgEZeQmHARQCARybAQmfASICARaQAQuXARsCARGzAQm3ASICAQ6oAQuvARsCAQm6ARO6ATsCAQO8AQnKARQCAQZanAFa/wECAS1SZVJrAgErTVVNaAIBKU85Tz4CAShynAFy/wECASVqZWprAgEjZVVlZgIBIWc5Zz4CASCFAZwBhQH2AQIBHZ0BnAGdAfYBAgEXlQFllQFrAgEVkAFVkAFmAgETkgE5kgE+AgEStQGcAbUB9gECAQ+tAWWtAWsCAQ2oAVWoAWgCAQuqATmqAT4CAQrIAZwByAH/AQIBBw==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d4kBQzpcVXNlcnNcYWxleGFuZHJ1LmZpZXJhc2N1XERlc2t0b3BcVWlQYXRoXFYyXFJQQS1MZWFndWUtSGFja2F0aG9uX1JvYm9EdWNrc1xSUEEtTGVhZ3VlX0hhY2thdGhvbl9Sb2JvRHVja3MgdjJcVWlQYXRoQnJpZWZcSXNDaGVja2VkLnhhbWwlPwPNAQ4CAQFGBV0VAgEmXgV1FQIBHnYFiAEKAgEYiQEFoAEVAgEQoQEFuAEVAgEIuQEFywEKAgECVwlbIgIBLEwLUxsCASdvCXMiAgEkZAtrGwIBH3YTdjsCARl4CYYBFAIBHJoBCZ4BIgIBFo8BC5YBGwIBEbIBCbYBIgIBDqcBC64BGwIBCbkBE7kBOwIBA7sBCckBFAIBBlmcAVn/AQIBLVFlUWsCAStMVUxoAgEpTjlOPgIBKHGcAXH/AQIBJWllaWsCASNkVWRmAgEhZjlmPgIBIIQBnAGEAfYBAgEdnAGcAZwB9gECAReUAWWUAWsCARWPAVWPAWYCARORATmRAT4CARK0AZwBtAH2AQIBD6wBZawBawIBDacBVacBaAIBC6kBOakBPgIBCscBnAHHAf8BAgEH</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -271,14 +270,15 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="222,630">
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="222,702">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="IsChecked_1" sap:VirtualizedContainerService.HintSize="262,750" />
+      <sap2010:ViewStateData Id="IsChecked_1" sap:VirtualizedContainerService.HintSize="262,782" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
